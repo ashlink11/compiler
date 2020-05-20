@@ -79,3 +79,5 @@ In the root directory `/` of my computer, there is a `bin` folder, and that's wh
 > Binary files are usually thought of as being a sequence of bytes, which means the binary digits (bits) are grouped in eights. Binary files typically contain bytes that are intended to be interpreted as something other than text characters. Compiled computer programs are typical examples; indeed, compiled applications are sometimes referred to, particularly by programmers, as binaries.
 
 - [Binary file](https://en.wikipedia.org/wiki/Binary_file)
+
+When code is executed, the CPU processes it, which means the instructions get put into the registers, so my binary must be compatible with my CPU, and my CPU enforces that its binary files conform to 64-bit architecture.
