@@ -128,3 +128,6 @@ In computer science, runtime, run time or execution time is the time when the CP
 
 18 min - more notes needed
 next: <https://www.youtube.com/watch?v=1gIiZfSbEAE>
+
+
+I got a real practice for tree traversal algorithms, like DFS and BFS for the first time from the syntax trees, using hash tables to resolve identifiers. Learning OOP and design patterns, many structs involves inheritances and we applied the visitor pattern to traverse.  Learn assembly languages: the compiler will emit low level code and debugging in a lower level gives coding a different perspective.
