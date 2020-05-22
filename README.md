@@ -50,6 +50,8 @@ Node.js is written in C++ and part of its code ecosystem are C++ APIs.
 
 I admire [Ryan Dahl's ideal to build high-quality software systems](https://tinyclouds.org/rant.html) and I'm interested in [his new secure JavaScript and TypeScript runtime called Deno](https://deno.land/). It uses V8 and is built in Rust. I want to understand his design choices and want to read through the Deno source code.
 
+[more on Rust](./rust.md)
+
 # Hardware Considerations
 
 Writing a compiler includes hardware considerations. Writing all sorts of software used to require hardware considerations, especially during the FORTRAN era.
