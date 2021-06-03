@@ -1,8 +1,6 @@
 # Building a Rust compiler with Rust
 
-## Diary of building incrementally
-
-#### June 2021: Spec'd out simplest compiler possible, researching how to write ASTs, and working step by step on writing Rust
+_June 2021: Spec'd out simplest compiler possible, researching how to write ASTs, and working step by step on writing Rust_
 
 ## The spec
 
@@ -10,9 +8,11 @@ I'm trying to make the simplest possible compiler, which just parses, verifies v
 
 Parsing requires building an abstract syntax tree. The code I want to parse is in the `hello.rs` file, essentially `print(1 + 1)`. This means I'll have only a few symbols/characters/words to parse and translate: `print`, `1`, and `+`. The logic spec is: be able to gather operators and operands, add them, convert them to x86 assembly language and print to standard output. 
 
+-----------
+-----------
+-----------
 
-
-#### May-June 2020: Read 8 chapters of the Rust book, researched compilers, assembly language, computer architecture, and C++ 
+_May-June 2020: Read 8 chapters of the Rust book, researched compilers, assembly language, computer architecture, and C++_
 
 Originally I wanted to write a C++ compiler in Rust; here are some of my [old notes](c++.md), and below are the still-relevant notes:
 
