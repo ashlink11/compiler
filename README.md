@@ -1,11 +1,27 @@
-# Building a C++ compiler with Rust
+# Building a Rust compiler with Rust
+
+## Diary of building incrementally
+
+#### June 2021: Spec'd out simplest compiler possible, researching how to write ASTs, and working step by step on writing Rust
+
+## The spec
+
+I'm trying to make the simplest possible compiler, which just parses, verifies valid tokens, and translates that to another language using a dictionary.
+
+Parsing requires building an abstract syntax tree. The code I want to parse is in the `hello.rs` file, essentially `print(1 + 1)`. This means I'll have only a few symbols/characters/words to parse and translate: `print`, `1`, and `+`. The logic spec is: be able to gather operators and operands, add them, convert them to x86 assembly language and print to standard output. 
+
+
+
+#### May-June 2020: Read 8 chapters of the Rust book, researched compilers, assembly language, computer architecture, and C++ 
+
+Originally I wanted to write a C++ compiler in Rust; here are some of my [old notes](c++.md), and below are the still-relevant notes:
 
 ## What is a compiler
 
 > A compiler is a computer program that translates computer code written in one programming language (the source language) into another language (the target language). The name compiler is primarily used for programs that translate source code from a high-level programming language to a lower level language (e.g., assembly language, object code, or machine code) to create an executable program.
 -[Wikipedia](https://en.wikipedia.org/wiki/Compiler)
 
-In this case: translate C++ source code into x86 assembly code via a program written in Rust.
+In this case: translate Rust source code into x86 assembly code via a program written in Rust.
 
 ## Why this project?
 
@@ -25,16 +41,7 @@ The whole system of technology, from computers, to the Internet, to the Web, is 
 
 Grace Hopper wrote the [first compiler](https://en.wikibooks.org/wiki/Introduction_to_Software_Engineering/Tools/Compiler#History) in the early 1952, which compiled A-0 source code into assembly language.
 
-# Language Choices
-
-## C++
-
-Google's V8 JavaScript engine is written in C++, so learning C++ will help me understand V8 source code.
-
-Node.js is written in C++ and part of its code ecosystem are C++ APIs.
-
-> C++ (/ˌsiːˌplʌsˈplʌs/) is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation. It is almost always implemented as a compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Oracle, and IBM, so it is available on many platforms.
--[Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B):
+# Language Choice
 
 ## Rust
 
