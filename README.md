@@ -4,9 +4,9 @@ _June 2021: Spec'd out simplest compiler possible, researching how to write ASTs
 
 ## The spec
 
-I'm trying to make the simplest possible compiler, which just parses, verifies valid tokens, and translates that to another language using a dictionary.
+I'm trying to make a very simple compiler, which just parses, verifies valid tokens, and translates that to another language using a dictionary.
 
-Parsing requires building an abstract syntax tree. The code I want to parse is in the `hello.rs` file, essentially `print(1 + 1)`. This means I'll have only a few symbols/characters/words to parse and translate: `print`, `1`, and `+`. The logic spec is: be able to gather operators and operands, add them, convert them to x86 assembly language and print to standard output. 
+Parsing requires building an abstract syntax tree. The code I want to parse is in the `hello.rs` file, essentially `print(1 + 1)`. This means I'll have only a few symbols/characters/words to parse and translate: `print`, `1`, `+`, `fn`, etc. The logic spec is: be able to gather operators and operands, add them, convert them to x86 assembly language and print to standard output. 
 
 -----------
 -----------
