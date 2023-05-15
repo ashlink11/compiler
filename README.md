@@ -2,6 +2,8 @@
 
 _June 2021: Spec'd out simplest compiler possible, researching how to write ASTs, and working step by step on writing Rust_
 
+_May 2023: bought Thorsten Ball's books and excited to get started again on this project_
+
 ## The spec
 
 I'm trying to make a very simple compiler, which just parses, verifies valid tokens, and translates that to another language using a dictionary.
