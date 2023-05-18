@@ -73,3 +73,11 @@ func LookupIdent(ident string) TokenType {
 	}
 	return IDENT
 }
+
+go
+statically typed 
+compiled
+2007
+dependency analysis innovations
+pointers but no pointer arithmetic
+parallelism via routines 
