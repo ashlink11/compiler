@@ -81,3 +81,9 @@ compiled
 dependency analysis innovations
 pointers but no pointer arithmetic
 parallelism via routines 
+
+It doesn’t need to buffer or save tokens, since there will only be one method called NextToken(), which will output the next token.
+
+That means, we’ll initialize the lexer with our source code and then repeatedly call NextToken() on it to go through the source code, token by token, character by character.
+
+So let’s create a new package and add a first test that we can continuously run to get feedback about the working state of the lexer.
