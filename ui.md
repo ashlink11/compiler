@@ -2,13 +2,15 @@ tech stack to build an interface to this project
 
 intended tech stack
 figma
-material design https://m3.material.io/develop/web 
+material design https://material-components.github.io/material-components-web-catalog/#/ 
 angular & typescript
 authentication (auth0 via firebase?)
 rust server either from rust book or
 deno & fresh framework
 gh actions for ci/cd
 postgreSQL or firebase for storing data
+
+web workers : https://examples.deno.land/web-workers 
 
 progress:
 This package has installed:
@@ -20,4 +22,3 @@ brew install deno
 deno 1.24.1 (release, x86_64-apple-darwin)
 v8 10.4.132.20
 typescript 4.7.4
-
