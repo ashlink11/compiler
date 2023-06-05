@@ -92,4 +92,39 @@ So let’s create a new package and add a first test that we can continuously ru
 
 we successfully turned the small subset of the Monkey language we used in the our test case into tokens!
 
-For that reason the test cases I write for lexers cover all tokens and also try to provoke off-by-one errors, edge cases at end-of-file, newline handling, multi-digit number parsing and so on.
+The lexer’s job is not to tell us whether code makes sense, works or contains errors. That comes in a later stage. The lexer should only turn this input into tokens. For that reason the test cases I write for lexers cover all tokens and also try to provoke off-by-one errors, edge cases at end-of-file, newline handling, multi-digit number parsing and so on.
+
+// lexer/lexer_test.go
+```go
+func TestNextToken(t *testing.T) { input := `let five = 5;
+let ten = 10;
+   let add = fn(x, y) {
+     x + y;
+};
+   let result = add(five, ten);
+   !-/*5;
+   5 < 10 > 5;
+   if (5 < 10) {
+       return true;
+   } else {
+       return false;
+
+  10 == 10; 10 != 9;
+}`
+// [...]
+}
+```
+
+```go
+var keywords = map[string]TokenType{ 
+"fn": FUNCTION,
+"let": LET,
+"true": TRUE,
+"false":  FALSE,
+"if":     IF,
+"else":   ELSE,
+"return": RETURN,
+}
+```
+
+p.25
