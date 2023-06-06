@@ -151,3 +151,9 @@ tok = newToken(token.BANG, l.ch)
 }
 // [...]
 }
+
+run 01 code, etc. with `go run main.go`
+then input into the repl e.g.:
+```go
+puts("hello")
+```
