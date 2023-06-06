@@ -128,3 +128,26 @@ var keywords = map[string]TokenType{
 ```
 
 p.25
+
+// lexer/lexer.go
+func (l *Lexer) NextToken() token.Token { // [...]
+switch l.ch { case '=':
+if l.peekChar() == '=' { ch := l.ch
+               l.readChar()
+               literal := string(ch) + string(l.ch)
+               tok = token.Token{Type: token.EQ, Literal: literal}
+} else {
+tok = newToken(token.ASSIGN, l.ch)
+}
+// [...]
+case '!':
+if l.peekChar() == '=' {
+               ch := l.ch
+               l.readChar()
+               literal := string(ch) + string(l.ch)
+               tok = token.Token{Type: token.NOT_EQ, Literal: literal}
+} else {
+tok = newToken(token.BANG, l.ch)
+}
+// [...]
+}
