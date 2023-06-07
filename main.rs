@@ -1,63 +1,48 @@
-//import `one_plus_one.rs`
+use std::str;
 
 fn main() {
-  // get a character stream of `one_plus_one.rs`
-  let charstream = "";
+  //&str rather than &String and String::from()
+  const ILLEGAL: &str = "ILLEGAL";
+  const EOF: &str = "EOF";
 
-  // parse first char
-  mut current_chars = charstream[0];
+  // Identifiers + literals
+	const IDENT: &str = "IDENT";
+	const INT: &str = "INT";
 
-  // all words/characters/symbols in `one_plus_one.rs`
-  let FN = "fn";
-  let MAIN = "main";
-  let SPACE = " ";
-  let NEWLINE = "\n";
-  let OPEN_PARENS = "(";
-  let CLOSE_PARENS = ")";  
-  let OPEN_CURLY = "{";
-  let CLOSE_CURLY = "}";  
-  let ONE = "1";
-  let PLUS = "+";  
-  let PRINTLN = "println!";
+  // operators
+	const ASSIGN: &str = "=";
+	const PLUS: &str = "+";
+	const MINUS: &str = "-";
+	const BANG: &str = "!";
+	const ASTERISK: &str = "*";
+	const SLASH: &str = "/";
 
-  // build dictionary
-  let dictionary = Vector<String>;
+	const LT: &str = "<";
+	const GT: &str = ">";
 
-  // add words to dictionary
-  dictionary.push(FN)
-  dictionary.push(MAIN)
-  dictionary.push(SPACE)
-  dictionary.push(NEWLINE)
-  dictionary.push(OPEN_PARENS)
-  dictionary.push(CLOSE_PARENS)
-  dictionary.push(CLOSE_CURLY)
-  dictionary.push(OPEN_CURLY)
-  dictionary.push(ONE)
-  dictionary.push(PLUS)
-  dictionary.push(PRINTLN)
-  
-  // TODO
-  // loop through dictionary and compare/check for equality w `current_chars`
-    // if there's a match, make note & increment `current_chars` in the charstream
-    // if there's not a match, add one more char to `current_chars`.
+	const EQ: &str = "==";
+	const NOT_EQ: &str = "!=";
+
+  // delimiters
+	const COMMA: &str = ",";
+	const SEMICOLON: &str = ";";
+	
+  const LPAREN: &str = "(";
+	const RPAREN: &str = ")";
+	const LBRACE: &str = "{";
+	const RBRACE: &str = "}";
+
+  // keywords
+	const FUNCTION: &str = "FUNCTION";
+	const LET: &str = "LET";
+	const TRUE: &str = "TRUE";
+	const FALSE: &str = "FALSE";
+	const IF: &str = "IF";
+	const ELSE: &str = "ELSE";
+	const RETURN: &str = "RETURN";
+
+  println!("The first const to print is {}", ILLEGAL);
+
 
 }
 
-
-
-
-// https://doc.rust-lang.org/nightly/nightly-rustc/rustc_ast/ast/struct.Item.html
-pub struct Item<K = ItemKind> {
-  pub attrs: Vec<Attribute>,
-  pub id: NodeId,
-  pub span: Span,
-  pub vis: Visibility,
-  pub ident: Ident,
-  pub kind: K,
-  pub tokens: Option<LazyTokenStream>,
-}
-
-// https://doc.rust-lang.org/nightly/nightly-rustc/rustc_ast/ast/enum.ItemKind.html
-pub enum ItemKind {
-  // ...
-}
