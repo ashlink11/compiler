@@ -41,6 +41,13 @@ fn main() {
 	const ELSE: &str = "ELSE";
 	const RETURN: &str = "RETURN";
 
+  type TokenType str;
+
+  type Token struct {
+    type: TokenType,
+    const: str,
+  }
+
   println!("The first const to print is {}", ILLEGAL);
 
 
