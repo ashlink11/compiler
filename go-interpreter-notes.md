@@ -229,4 +229,5 @@ func LookupIdent(ident string) TokenType {
 }
 
 ```
-
+repl
+read from the input source until encountering a newline, take the just read line and pass it to an instance of our lexer and finally print all the tokens the lexer gives us until we encounter EOF.
